@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - April_19_Homework_Simple_Ads_Auth</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/April_19_Homework_Simple_Ads_Auth.styles.css" asp-append-version="true" />
+</head>
+<body>
+        <header style="margin-bottom: 100px;">
+        <nav b-gyvb0mk0dj class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark border-bottom box-shadow">
+            <div b-gyvb0mk0dj class="container">
+                <a class="navbar-brand" href="/">SimpleAdsAuth.Web</a>
+                <button b-gyvb0mk0dj class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span b-gyvb0mk0dj class="navbar-toggler-icon"></span>
+                </button>
+                <div b-gyvb0mk0dj class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul b-gyvb0mk0dj class="navbar-nav flex-grow-1">
+                        <li b-gyvb0mk0dj class="nav-item">
+                            <a class="nav-link text-light" href="/">Home</a>
+                        </li>
+                        @if(!User.Identity.IsAuthenticated)
+                        {
+                            <li b-gyvb0mk0dj class="nav-item">
+                                <a class="nav-link text-light" href="/Home/NewAd">New Ad</a>
+                            </li>
+                            <li b-gyvb0mk0dj class="nav-item">
+                                <a class="nav-link text-light" href="/Account/Login">Log in</a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li b-gyvb0mk0dj class="nav-item">
+                                <a class="nav-link text-light" href="/Home/NewAd">New Ad</a>
+                            </li>
+                            <li b-gyvb0mk0dj class="nav-item">
+                                <a class="nav-link text-light" href="/Home/MyAccount">MyAccount</a>
+                            </li>
+                             <li b-gyvb0mk0dj class="nav-item">
+                                <a class="nav-link text-light" href="/Account/Logout">Log Out</a>
+                            </li>
+                        }
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+  
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

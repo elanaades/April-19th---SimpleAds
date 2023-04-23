@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33403.182
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "April 19 Homework Simple Ads Auth", "April 19 Homework Simple Ads Auth\April 19 Homework Simple Ads Auth.csproj", "{C1BB7A5F-6356-4A71-9106-B8549C138CAF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simple Ads Auth.Data", "Simple Ads Auth.Data\Simple Ads Auth.Data.csproj", "{FA40DD34-AEC9-4C99-9BEF-33A4628B5265}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C1BB7A5F-6356-4A71-9106-B8549C138CAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1BB7A5F-6356-4A71-9106-B8549C138CAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1BB7A5F-6356-4A71-9106-B8549C138CAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1BB7A5F-6356-4A71-9106-B8549C138CAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA40DD34-AEC9-4C99-9BEF-33A4628B5265}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA40DD34-AEC9-4C99-9BEF-33A4628B5265}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA40DD34-AEC9-4C99-9BEF-33A4628B5265}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA40DD34-AEC9-4C99-9BEF-33A4628B5265}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A6CAE93E-2A77-46F8-9F1A-2277F9F8C701}
+	EndGlobalSection
+EndGlobal

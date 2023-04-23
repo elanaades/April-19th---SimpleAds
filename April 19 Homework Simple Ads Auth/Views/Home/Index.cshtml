@@ -1,0 +1,32 @@
+﻿@model HomePageViewModel
+
+@if(Model.Ads != null)
+{
+    @foreach (var ad in Model.Ads)
+    {
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="bg-light p-4 rounded shadow mb-3">
+                    <h5>Listed By: @ad.Name</h5>
+                    <h5>Listed On: @ad.Date.ToShortDateString() </h5>
+                    <h5>Phone Number: @ad.Phone</h5>
+                    <h3>Details: </h3>
+                    <p>@ad.Details</p>
+                    @if (User.Identity.IsAuthenticated && Model.CurrentUser.Id == ad.UserId)
+                    {
+                        <form method="post" action="/home/deletead">
+                            <input type="hidden" name="id" value="@ad.Id" />
+                            <button class="btn btn-danger">Delete</button>
+                        </form>
+                    }
+                </div>
+            </div>
+        </div>
+    }
+}
+else
+{
+    <p>There are currently no available ads. Check back later!</p>
+}
+
+
